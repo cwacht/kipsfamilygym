@@ -1,0 +1,155 @@
+---
+permalink: /enrichment/index.html
+translationKey: "enrichmentPage"
+pageTitle: "Enrichment Program"
+pageIntro: "Are you looking for a fun and challenging way to add to your school or
+daycare curriculum? We come to you and help your students develop
+their physical, mental, and social skills."
+---
+
+{% extends "layouts/base.njk" %}
+
+{% set metaTitle = pageTitle %}
+{% set metaDescription = pageIntro %}
+{% set metaImage = site.baseUrl ~ "/assets/img/social_media.jpg" %}
+{% set currentSectionId = "enrichment" %}
+
+{% block content %}
+<main>
+
+  <div class="c-pagesection  c-pagesection--dark  u-padding-top-xl">
+    <div class="l-container  l-container--narrow">
+      <h1 class="c-h1 c-h1--invert">{{ pageTitle }}</h1>
+      <p class="c-pageintro">{{ pageIntro }}</p>
+    </div>
+  </div>
+
+  <div class="c-pagesection">
+    <div class="l-container  l-container--narrow">
+
+      <h2 class="c-h2">What we teach</h2>
+      <div class="l-split  l-split--2fr1fr">
+        <div>
+          <p>Our enrichment program is designed for children ages 6 mo-9 years old and is
+perfect for those who are new to gymnastics or who are looking to improve their
+skills. We offer age based classes that focus on tumbling, balance, coordination,
+and strength. We provide experienced, professional gymnastics coaches and bring
+all our equipment for an indoor or outdoor experience!</p>
+          <p>In addition to the physical benefits, gymnastics also helps children develop their
+confidence, teamwork, and problem-solving skills. Our experienced instructors will
+create a fun and supportive environment where your child can learn and grow at
+their own pace.</p>
+          <p>In addition to the physical benefits, gymnastics also helps children develop their
+confidence, teamwork, and problem-solving skills. Our experienced instructors will
+create a fun and supportive environment where your child can learn and grow at
+their own pace.</p>
+         </div>
+        <div>
+          <h3 class="c-h5">Contact us for a free trial class at your school or daycare!</h3>
+          <ul class="c-listbare">
+            <li><a href="mailto:collapsologie@gmail.com">collapsologie@gmail.com</a></li>
+            <li><a href="https://twitter.com/collapsology">@collapsology</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="c-pagesection  c-pagesection--border">
+    <div class="l-container  l-container--narrow">
+
+      <h3 class="c-h2">Class Descriptions & Pricing</h3>
+      <ul class="l-grid  l-grid--colgap  l-grid--2cols@small">
+        <li>
+          <h5 class="c-h4">Wiggle Worms (Ages 6-12mos)</h5>
+          <p>
+            30 minute classes designed to work on adjacent play, head control, hand‐eye
+coordination, crawling and pulling to stand. Emphasis on progressions from crawling to
+walking and climbing.
+          </p>
+        </li>
+        <li>
+          <h5 class="c-h4">Curious Climbers (Ages 1-2yrs)</h5>
+          <p>
+            30 minute class is designed to enhance the child’s motor, listening, and social skills through
+fun gymnastics oriented activities. Emphasis on progressions from walking to climbing and
+supporting weight on hands; introducing log‐rolling and safely landing.
+          </p>
+        </li>
+        <li>
+        <h5 class="c-h4">Tumble Tots (Ages 2-4yrs)</h5>
+        <p>
+          45 minute class is designed to enhance the child’s motor, listening, and social skills through
+fun gymnastics oriented activities. Emphasis on progressions to beam walks, hanging;
+introducing forward rolls and safe landings from height.
+        </p>
+       </li>
+       <li>
+        <h5 class="c-h4">Little Leapers (Ages 4-6yrs)</h5>
+        <p>
+          45 minute class is the introduction to basic gymnastics skills. Emphasis on forward rolls,
+beam walks, swinging & casting; introducing backward rolls, bridges, and handstands.
+        </p>
+       </li>
+       <li>
+        <h5 class="c-h4">Beginner Gymnastics (Ages 7-9 yrs)</h5>
+        <p>
+          1 hour class is a progression on basic gymnastics skills. Activities include handstands,
+cartwheels, forward and backward rolls, bridges, jumping, low bar, floor beam.
+        </p>
+       </li>
+     </ul>
+
+   </div>
+ </div>
+
+   <div class="c-pagesection  c-pagesection--border">
+    <div class="l-container  l-container--narrow">
+
+      <h2 class="c-h2">What they learn</h2>
+      <div class="l-split  l-split--2fr1fr">
+        <div>
+          <ul>
+            <li><strong>Body control and coordination:</strong>
+              <p>
+                Children will
+learn how to control their bodies in space,
+coordinating several individual body parts
+into complex movements and tumbles
+              </p>
+            </li>
+            <li><strong>Balance:</strong>
+              <p>
+                Children will develop their balance
+through activities such as walking and
+hopping on balance beams and over surfaces.
+              </p>
+            </li>
+            <li><strong>Strength:</strong>
+              <p>
+                Climbing, hanging, jumping and
+practicing safe landings builds upper body,
+lower body and core strength.
+              </p>
+            </li>
+            <li><strong>Confidence:</strong>
+              <p>
+                Children will gain confidence in their abilities through gymnastics,
+which will help them in other areas of their lives.
+              </p>
+            </li>
+            <li><strong>Social skills:</strong>
+              <p>
+                Children will learn how to interact with other children and adults in
+a positive and supportive environment.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}
