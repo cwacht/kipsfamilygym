@@ -2,7 +2,7 @@
 permalink: /classes/index.html
 translationKey: "classesPage"
 pageTitle: "Classes"
-pageIntro: "This website is maintained by a collective. Please feel free to contact us via email or Twitter, even simply to say hello."
+pageIntro: "We are setting our Fall Class Schedule now! As we prepare to open, we would love your input. Fill out this form to get your first class free! https://forms.gle/6EFiVebEKM2wurTJ7"
 ---
 
 <style>#omnify-booking-widget{ background-color:#3898EC; color:#ffffff; border-color:#3898EC;width:auto; height:auto; border-radius:2px; border-width:1px; padding:12px 25px 12px 25px; font-family:sans-serif; font-weight: normal;font-size: 100%;cursor: pointer; }</style>
@@ -16,6 +16,9 @@ pageIntro: "This website is maintained by a collective. Please feel free to cont
 {% set metaImage = site.baseUrl ~ "/assets/img/social_media.jpg" %}
 {% set currentSectionId = "classes" %}
 
+
+{% from "macros/linkItem.njk" import linkItem %}
+
 {% block content %}
 <main>
 
@@ -26,7 +29,7 @@ pageIntro: "This website is maintained by a collective. Please feel free to cont
     </div>
   </div>
 
-  <div class="c-pagesection">
+  {# <div class="c-pagesection">
     <div class="l-container  l-container--narrow">
 
       <h2 class="c-h2">We want to hear from you!</h2>
@@ -40,82 +43,36 @@ pageIntro: "This website is maintained by a collective. Please feel free to cont
         <div>
           <h3 class="c-h5">Contact</h3>
           <ul class="c-listbare">
-            <li><a href="mailto:collapsologie@gmail.com">collapsologie@gmail.com</a></li>
-            <li><a href="https://twitter.com/collapsology">@collapsology</a></li>
+            <li><a href="mailto:kipsfamilygym@gmail.com">kipsfamilygym@gmail.com</a></li>
           </ul>
         </div>
       </div>
 
     </div>
-  </div>
-  <div class="c-pagesection  c-pagesection--border">
-    <div class="l-container  l-container--narrow">
+  </div> #}
 
-      <h3 class="c-h2">Objectives</h3>
-      <div style='width:100%'>
-        <iframe id='omnify-widget-ifrm' src='https://omfgym.getomnify.com/widgets/K80L5RQMH4JG4ZJJJRDLAK' height='100%' width='100%' frameborder='0'></iframe>
-      </div>
-      <script>var business_url = 'https://omfgym.getomnify.com';</script>
-      <script src='https://app.getomnify.com/assets/js/omnify-widget-supporting-script.js'></script>
+      {% set linksByTypes = collections.linksByTypes %}
+      {% for type, links in linksByTypes %}
+        <div class="c-pagesection  c-pagesection--border">
+          <div class="l-container  l-container--narrow">
 
-   </div>
- </div>
+            <h2 class="c-smalltitle  u-margin-bottom-xl">{{ type }}</h2>
+            {% for link in links %}
+              {% if loop.first %}<ul class="l-grid  l-grid--gap  l-grid--2cols@medium">{% endif %}
+                <li>
+                  {{ linkItem(
+                    url = link.data.url,
+                    title = link.data.title,
+                    content = link.templateContent | safe
+                  ) }}
+                </li>
+              {% if loop.last %}</ul>{% endif %}
+            {% endfor %}
 
-   <div class="c-pagesection  c-pagesection--border">
-    <div class="l-container  l-container--narrow">
-
-      <h2 class="c-h2">Bib.Collapse</h2>
-      <div class="l-split  l-split--2fr1fr">
-        <div>
-          <p>The database offers a transdisciplinary panorama of the scientific literature relevant to the study of collapse risks and phenomena in their environmental, human, social and cultural dimensions. </p>
-          <p>In constant evolution since its inception in 2015, <b>bib.collapse</b> is structured in four main categories of keywords:</p>
-          <ol>
-            <li><strong>General discussions</strong>
-              <ul>
-                <li>Limits to growth <em>(discussions &amp; theories of societal collapse and limits to growth)</em></li>
-                <li>Existential risks <em>(discussions &amp; theories of existential risks)</em></li>
-                <li>Post-normal science <em>(TEK, uncertainty, governance, etc.)</em></li>
-              </ul>
-            </li>
-            <li><strong>Overshoots &amp; vulnerabilities</strong>
-              <ul>
-                <li>Planetary boundaries <em>(climate, biodiversity, acidification, pollution, water, etc.)</em></li>
-                <li>Physical limits <em>(energy sources, critical metal &amp; minerals, cabon budget, etc.)</em></li>
-                <li>Lock-ins <em>(socio-technical, cognitive, behavioural, rebound effect, etc.)</em></li>
-                <li>Systemic risks <em>(finance, infrastructure, supply chain, telecouplings, etc.)</em></li>
-              </ul>
-            </li>
-            <li><strong>Horsemen of the apocalypse</strong>
-              <ul>
-                <li>Violence, conflicts and wars <em>(migrations, climate, resources, etc.)</em></li>
-                <li>Health, diseases and pandemics <em>(COVID-19, climate, biodiversity, etc.)</em></li>
-                <li>Agriculture, food, famine <em>(breadbasket failure, conflicts, seeds, etc.)</em></li>
-                <li>Disasters <em>(Extreme climate events, nuclear fallout, etc.)</em></li>
-              </ul>
-            </li>
-            <li><strong>Human and social sciences</strong>
-              <ul>
-                <li>Psychology <em>(fear, denial, grief, hope, etc.)</em></li>
-                <li>Political science <em>(governance, activism, failed states, inequality, etc.)</em></li>
-                <li>History <em>(USSR, Rapa-Nui, Rome, etc.)</em></li>
-                <li>Etc. <em>(demography, geopolitics, sociology, philosophy, etc.)</em></li>
-              </ul>
-            </li>
-          </ol>
-          <p>It mainly contains references and abstracts of (1) articles published in peer-reviewed journals; (2) chapters of, and academic books; (3) conference papers; (4) PhD and MA/MSc thesis, (5) scientifically-sourced reports and white papers of public institutions and independent bodies ; and a few magazine and newspaper articles of interest.</p>
+          </div>
         </div>
-        <div>
-          <h3 class="c-h5">Science database</h3>
-          <ul class="c-listbare">
-            <li>Edition: Raphaël Stevens</li>
-            <li>Version: 2.0</li>
-            <li>Service: Zotero</li>
-          </ul>
-        </div>
-      </div>
+      {% endfor %}
 
-    </div>
-  </div>
 
 </main>
 {% endblock %}
