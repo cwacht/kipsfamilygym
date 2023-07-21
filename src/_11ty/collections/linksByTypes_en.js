@@ -6,13 +6,14 @@ module.exports = function (collection) {
   allLinks = lodash.groupBy(allLinks, (item) => item.data.type);
   Object.entries(allLinks).forEach((category) => {
     let entries = category[1];
-    entries.sort((a, b) => {
-      let titleA = a.data.title.toLowerCase();
-      let titleB = b.data.title.toLowerCase();
-      if (titleA > titleB) return 1;
-      if (titleA < titleB) return -1;
-      return 0;
-    });
+    entries = lodash.sortBy(entries, (item) => item.data.order);
+    // entries.sort((a, b) => {
+    //   let titleA = a.data.title.toLowerCase();
+    //   let titleB = b.data.title.toLowerCase();
+    //   if (titleA > titleB) return 1;
+    //   if (titleA < titleB) return -1;
+    //   return 0;
+    // });
   });
   return allLinks;
 } 
