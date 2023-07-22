@@ -15,7 +15,7 @@ const setFileExtension = require("./src/_11ty/filters/setFileExtension.js");
 // const links_en = require("./src/_11ty/collections/links_en.js");
 // const linksByTypes_fr = require("./src/_11ty/collections/linksByTypes_fr.js");
 // const linksByTypes_en = require("./src/_11ty/collections/linksByTypes_en.js");
-const books = require("./src/_11ty/collections/books_en.js");
+// const books = require("./src/_11ty/collections/books_en.js");
 const links = require("./src/_11ty/collections/links_en.js");
 const linksByTypes = require("./src/_11ty/collections/linksByTypes_en.js");
 
@@ -37,7 +37,7 @@ module.exports = function (eleventyConfig) {
   // eleventyConfig.addCollection("links_en", links_en);
   // eleventyConfig.addCollection("linksByTypes_fr", linksByTypes_fr);
   // eleventyConfig.addCollection("linksByTypes_en", linksByTypes_en);
-  eleventyConfig.addCollection("books", books);
+  // eleventyConfig.addCollection("books", books);
   eleventyConfig.addCollection("links", links);
   eleventyConfig.addCollection("linksByTypes", linksByTypes);
 
