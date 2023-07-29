@@ -11,9 +11,11 @@
   font-family: $fontstack-alt;
   color: var(--color-white);
   text-align: center;
+  margin-bottom: 1em;
 
   & > span {
     color: var(--color-primary-main);
+    font-size: smaller;
   }
 
   @include mq(small) {
