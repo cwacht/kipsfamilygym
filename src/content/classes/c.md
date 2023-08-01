@@ -1,5 +1,6 @@
 ---
-title: "Beginner Gymnastics (Ages 7-9 yrs)"
+title: "C"
+tags: C
 order: 5
 ---
 

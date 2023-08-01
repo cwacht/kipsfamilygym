@@ -1,0 +1,82 @@
+---
+permalink: /omg/index.html
+translationKey: "classesPage"
+pageTitle: "OMG"
+pageIntro: "We are setting our Fall Class Schedule now! As we prepare to open, we would love your input. Fill out this form to get your first class free! https://forms.gle/6EFiVebEKM2wurTJ7"
+---
+
+<style>#omnify-booking-widget{ background-color:#3898EC; color:#ffffff; border-color:#3898EC;width:auto; height:auto; border-radius:2px; border-width:1px; padding:12px 25px 12px 25px; font-family:sans-serif; font-weight: normal;font-size: 100%;cursor: pointer; }</style>
+<script type='text/javascript'>function newPopup(url){popupWindow=window.open(url,'','left=10,top=100,resizable=yes,scrollbars=yes,menubar=no,location=no,,toolbar=no,directories=no,status=yes')}</script>
+<h4><button id='omnify-booking-widget' onclick="JavaScript:newPopup('https://omfgym.getomnify.com/#!/home?auth=login ');"> Book now</button></h4>
+
+{% extends "layouts/base.njk" %}
+
+{% set metaTitle = pageTitle %}
+{% set metaDescription = pageIntro %}
+{% set metaImage = site.baseUrl ~ "/assets/img/social_media.jpg" %}
+{% set currentSectionId = "classes" %}
+
+
+{% from "macros/linkItem.njk" import linkItem %}
+
+{% block content %}
+<main>
+
+  <div class="c-pagesection  c-pagesection--dark  u-padding-top-xl">
+      <div class="l-container  l-container--narrow">
+        <h1 class="c-h1 c-h1--invert">OMG</h1>
+        <p class="c-pageintro">We are setting our Fall Class Schedule now! As we prepare to open, we would love your
+          input. Fill out <a href="https://forms.gle/6EFiVebEKM2wurTJ7">this form</a> to get your first class free!</p>
+      </div>
+    </div>
+
+
+  {# <div class="c-pagesection">
+    <div class="l-container  l-container--narrow">
+
+      <h2 class="c-h2">We want to hear from you!</h2>
+      <div class="l-split  l-split--2fr1fr">
+        <div>
+          <p>
+            We are setting our Fall Class Schedule now! As we prepare to open, we would love your input. 
+            Fill out <strong><a href="https://forms.gle/6EFiVebEKM2wurTJ7">this form</a></strong> to get your first class free!
+          </p>
+         </div>
+        <div>
+          <h3 class="c-h5">Contact</h3>
+          <ul class="c-listbare">
+            <li><a href="mailto:kipsfamilygym@gmail.com">kipsfamilygym@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+ #}
+      {# {% set linksByTypes = collections.linksByTypes %} #}
+      {% for item in collections['A']|sort(attribute='data.order')  %}
+        <div class="c-pagesection  c-pagesection--border">
+          <div class="l-container  l-container--narrow">
+
+            <h2 class="c-smalltitle  u-margin-bottom-xl">{{ item.data.title }}</h2>
+            <h2 class="c-smalltitle  u-margin-bottom-xl">{{ item.data.order }}</h2>
+            <h2 class="c-smalltitle  u-margin-bottom-xl">{{ item.content }}</h2>
+            {# {% for link in links %}
+              {% if loop.first %}<ul class="l-grid  l-grid--gap  l-grid--2cols@medium">{% endif %}
+                <li>
+                  {{ linkItem(
+                    url = link.data.url,
+                    title = link.data.title,
+                    content = link.templateContent | safe
+                  ) }}
+                </li>
+              {% if loop.last %}</ul>{% endif %}
+            {% endfor %} #}
+
+          </div>
+        </div>
+      {% endfor %}
+
+
+</main>
+{% endblock %}
