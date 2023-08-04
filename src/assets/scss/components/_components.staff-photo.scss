@@ -1,0 +1,32 @@
+// --------------------------------
+// =titles
+// --------------------------------
+
+.staff-photo{
+  overflow: hidden;
+  text-align: center;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+
+  img{
+    width: -webkit-fill-available;
+    transition: all 0.5s;
+    &#erin{
+      width: 47rem;
+      object-position: -12rem -7rem;
+      &:hover{
+        width: 15rem;
+        object-position: 50% 50%;
+      }
+    }
+    &#carey{
+      width: 37rem;
+      object-position: -4rem -8rem;
+      &:hover{
+        width: 15rem;
+        object-position: 50% 50%;
+      }
+    }
+  }
+}
